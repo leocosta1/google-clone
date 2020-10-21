@@ -101,12 +101,12 @@ html, body {
 }
 
 .content .search-bar {
-    min-width: 90%;
+    width: 90%;
     height: 30px;
 
     border: 1px solid #CCC;
     border-radius: 16px;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 0 10px;
 
     display: flex;
@@ -127,9 +127,11 @@ html, body {
 }
 
 .footer .section {
-    padding: 10px 8px;
+    padding: 10px 12px;
+
+    font-size: 15px;
     background-color: #DEDEDE;
-    color: #999;
+    color: #888;
 
     display: flex;
     align-items: center;
@@ -141,4 +143,23 @@ html, body {
 
 .footer .section:not(:first-child) {
     border-top: 1px solid #CCC;
+}
+.footer span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1024px) {
+    .content img {
+        width: 400px;
+        height: auto;
+    }
+    .content .search-bar {
+        width: 950px;
+        height: 35px;
+    }
+    .footer .section {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
 }
