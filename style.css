@@ -20,11 +20,15 @@ html, body {
 /* Colors */
 :root {
     --blue: #1A73E8;
-    --gray: #757575;
+    --gray: rgba(0, 0, 0, 0.5);
+    --gray-hover: rgba(0, 0, 0, 0.8);
 }
 
 /* Header */
 .header {
+    width: 100%;
+    height: 48px;
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -35,26 +39,31 @@ html, body {
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
 }
 
 .header a:link, a:visited {
     color: var(--gray);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
     text-decoration: none;
 
-    padding: 8px 15px;
-    border-bottom: 2px solid transparent;
+    padding: 12px 8px;
 }
+.header a:hover {
+    color: var(--gray-hover);
+}
+
 .header a.active {
     color: var(--blue);
     border-bottom: 2px solid var(--blue)
 }
+.header a:not(.active) {
+    border-bottom: 2px solid transparent;
+}
 
 .header .svg-wrapper {
-    padding: 10px 16px;
+    padding: 12px 16px;
 }
 .header svg {
     width: 24px;
@@ -65,6 +74,9 @@ html, body {
 .header .right svg {
     width: 20px;
     height: 20px;
+}
+.header svg:hover {
+    color: var(--gray-hover);
 }
 
 .header button {
@@ -100,32 +112,45 @@ html, body {
     height: auto;
 }
 
-.content .search-bar {
+.content .search {
     width: 90%;
     height: 30px;
+    margin: 30px 0 20px;
+    position: relative;
 
+    display: flex;
+    align-items: center;
+}
+
+.content .search-bar {
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
     border: 1px solid #CCC;
     border-radius: 16px;
-    margin: 30px 0 20px;
-    padding: 0 10px;
+    padding: 0 10px 0 35px;
+    outline: none;
 
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
+.content .search-bar:focus {
+    border: 1px solid #FBC403;
+}
 
-.content .search-bar svg {
+.content svg {
     width: 16px;
     height: 16px;
     color: var(--gray);
-    margin-right: 6px;
-}
 
-.content textarea {
-    width: 100%;
-    resize: none;
-    border: none;
-    outline: none;
+    position: absolute;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.content svg:hover {
+    color: var(--gray-hover);
 }
 
 .content .offer {
@@ -167,12 +192,23 @@ html, body {
     text-decoration: underline;
 }
 
+/* Media Querries */
 @media screen and (min-width: 1024px) {
+    .header {
+        justify-content: flex-end;
+    }
+    .header .section.left {
+        display: none;
+    }
+    .header .section.right {
+        margin-top: 10px;
+        padding: 0 12px;
+    }
     .content img {
         width: 300px;
         height: auto;
     }
-    .content .search-bar {
+    .content .search {
         width: 750px;
         height: 35px;
     }
