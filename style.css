@@ -170,11 +170,10 @@ html, body {
 }
 
 .footer .section {
+    font-size: 14px;
     padding: 10px 12px;
 
-    font-size: 15px;
     background-color: #DEDEDE;
-    color: #888;
 
     display: flex;
     align-items: center;
@@ -183,11 +182,16 @@ html, body {
 .footer .section.center {
     justify-content: space-around;
 }
-
 .footer .section:not(:first-child) {
     border-top: 1px solid #CCC;
 }
-.footer span:hover {
+
+.footer .section a, span {
+    color: #888;
+    text-decoration: none;
+}
+
+.footer a:hover {
     cursor: pointer;
     text-decoration: underline;
 }
