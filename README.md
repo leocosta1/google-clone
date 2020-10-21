@@ -5,7 +5,7 @@ This project is a clone of the [Google Search Homepage](https://google.com). I m
 
 Mobile Preview             |  Desktop Preview
 :-------------------------:|:-------------------------:
-![](/images/mobile-preview.png)   |  ![](/images/desktop-preview.png)
+![Mobile Preview](/images/mobile-preview.png)   |  ![Desktop Preview](/images/desktop-preview.png)
 
 
 ## ToDo
