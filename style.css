@@ -69,6 +69,7 @@ html, body {
     width: 24px;
     height: 24px;
     color: var(--gray);
+    fill: var(--gray);
     cursor: pointer;
 }
 .header .right svg {
@@ -77,6 +78,7 @@ html, body {
 }
 .header svg:hover {
     color: var(--gray-hover);
+    fill: var(--gray-hover);
 }
 
 .header button {
