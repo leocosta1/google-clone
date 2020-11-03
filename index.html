@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 
@@ -14,7 +15,7 @@
     <header class="header">
         <div id="section-left" class="section left">
             <div class="svg-wrapper">
-                <svg id="left-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg id="left-menu-btn" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </div>
@@ -24,7 +25,7 @@
 
         <div class="section right">
             <div class="svg-wrapper">
-                <svg id="right-menu" class="gb_8e" viewBox="0 0 24 24">
+                <svg id="right-menu-btn" class="gb_8e" viewBox="0 0 24 24">
                     <path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path>
                 </svg>
             </div>
@@ -33,6 +34,20 @@
     </header>
 
     <main class="content">
+        <div id="left-menu" class="left-menu">
+            <div id="left-menu-content" class="left-menu-content">
+                <a class="img" href="#"><img src="assets/google-clone-logo.png" alt="Logo"></a>
+                <a href="#"><i class="material-icons">home</i>Home</a>
+                <a href="#"><i class="material-icons">history</i>Search Activity</a>
+                <a href="#"><i class="material-icons">collections_bookmark</i>Collections</a>
+                <div class="separator"></div>
+                <a href="#"><i class="material-icons">settings</i>Settings</a>
+                <a href="#"><i class="material-icons">explicit</i>Explicit Results</a>
+                <a href="#"><i class="material-icons">help</i>Help</a>
+                <a href="#"><i class="material-icons">feedback</i>Send Feedback</a>
+            </div>
+        </div>
+
         <a href="#"><img src="assets/google-clone-logo.png" alt="Google Clone Logo" class="logo"></a>
         <div class="search">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
