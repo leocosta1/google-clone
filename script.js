@@ -25,11 +25,13 @@ leftMenuBtn.addEventListener('click', () => {
     menu.style.visibility = 'visible';
     menuContent.style.width = '70%';
 
-    menu.addEventListener('click', () => {
-        menu.style.opacity = '0';
-        menu.style.visibility = 'hidden';
-        menuContent.style.width = '0';
-    });
+    document.onclick = function (e) {
+        if (e.target == menu) {
+            menu.style.opacity = '0';
+            menu.style.visibility = 'hidden';
+            menuContent.style.width = '0';
+        }
+    }
 });
 
 
@@ -37,7 +39,7 @@ leftMenuBtn.addEventListener('click', () => {
 rightMenuBtn.addEventListener('click', () => {
     const menu = document.getElementById('right-menu');
 
-    if(menu.style.opacity === '1') {
+    if (menu.style.opacity === '1') {
         menu.style.opacity = '0';
         menu.style.visibility = 'hidden';
         menu.style.height = '0';
