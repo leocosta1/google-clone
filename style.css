@@ -43,7 +43,7 @@ html, body {
     align-items: center;
 }
 
-.header .section a:link, a:visited {
+.header .section a:link, .header .section a:visited {
     color: var(--gray);
     font-size: 12px;
     font-weight: 600;
@@ -162,7 +162,7 @@ html, body {
 .content .offer {
     text-align: center;
 }
-.content .offer a:link, a:visited {
+.content .offer a:link, .content .offer a:visited {
     text-decoration: underline;
 }
 .content .offer a:hover {
@@ -325,7 +325,7 @@ html, body {
     border-top: 1px solid #CCC;
 }
 
-.footer .section a, span {
+.footer .section a, .footer .section span {
     color: #888;
     text-decoration: none;
 }
