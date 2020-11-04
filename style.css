@@ -164,6 +164,7 @@ html, body {
 }
 .content .offer a:link, .content .offer a:visited {
     text-decoration: underline;
+    color: #000;
 }
 .content .offer a:hover {
     text-decoration: none;
@@ -299,6 +300,7 @@ html, body {
 
 .right-menu span {
     font-size: 14px;
+    color: gray;
 }
 
 
