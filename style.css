@@ -187,6 +187,7 @@ html, body {
 
 .content .left-menu .left-menu-content {
     width: 0;
+    max-width: 300px;
     height: 100%;
     background-color: #FFF;
 
@@ -225,9 +226,9 @@ html, body {
 }
 
 .content .left-menu .left-menu-content .img {
-    width: 100%;
-    padding: 0 0 0 15px;
-    margin-bottom: 15px;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 0 15px 20px;
 }
 .content .left-menu .left-menu-content img {
     width: 100px;
@@ -363,12 +364,5 @@ html, body {
     }
     .right-menu {
         right: 20px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .content .left-menu .left-menu-content a {
-        width: fit-content;
-        padding: 0 100px 0 0;
     }
 }
