@@ -31,3 +31,20 @@ leftMenuBtn.addEventListener('click', () => {
         menuContent.style.width = '0';
     });
 });
+
+
+// Right Menu
+rightMenuBtn.addEventListener('click', () => {
+    const menu = document.getElementById('right-menu');
+
+    if(menu.style.opacity === '1') {
+        menu.style.opacity = '0';
+        menu.style.visibility = 'hidden';
+        menu.style.height = '0';
+    }
+    else {
+        menu.style.opacity = '1';
+        menu.style.visibility = 'visible';
+        menu.style.height = 'calc(100% - 70px)';
+    }
+});
