@@ -26,7 +26,7 @@ leftMenuBtn.addEventListener('click', () => {
     menuContent.style.width = '70%';
 
     document.onclick = function (e) {
-        if (e.target == menu) {
+        if (e.target == menu || e.target == document.getElementById('close-menu')) {
             menu.style.opacity = '0';
             menu.style.visibility = 'hidden';
             menuContent.style.width = '0';

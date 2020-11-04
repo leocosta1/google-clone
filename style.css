@@ -229,6 +229,7 @@ html, body {
     width: fit-content;
     height: fit-content;
     margin: 0 0 15px 20px;
+    cursor: pointer;
 }
 .content .left-menu .left-menu-content img {
     width: 100px;
