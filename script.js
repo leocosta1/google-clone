@@ -1,12 +1,7 @@
-// Elements
-const leftMenuBtn = document.getElementById('left-menu-btn');
-const rightMenuBtn = document.getElementById('right-menu-btn');
-
+// Add active class to header links
 const linksContainer = document.getElementById('section-left');
 const links = linksContainer.getElementsByClassName('link');
 
-
-// Add active class to header links
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function () {
         let current = document.getElementsByClassName('active');
@@ -17,36 +12,38 @@ for (let i = 0; i < links.length; i++) {
 
 
 // Left Menu
-leftMenuBtn.addEventListener('click', () => {
-    const menu = document.getElementById('left-menu');
-    const menuContent = document.getElementById('left-menu-content');
+const leftMenuBtn = document.getElementById('left-menu-btn');
 
-    menu.style.opacity = '1';
-    menu.style.visibility = 'visible';
-    menuContent.style.width = '70%';
+leftMenuBtn.addEventListener('click', () => {
+    const menu = document.querySelector('.left-menu');
+    const menuContent = document.querySelector('.left-menu-content');
+    const menuLinks = menuContent.getElementsByTagName('a');
+
+    menu.classList.remove('hidden');
+    menuContent.classList.remove('hidden');
 
     document.onclick = function (e) {
         if (e.target == menu || e.target == document.getElementById('close-menu')) {
-            menu.style.opacity = '0';
-            menu.style.visibility = 'hidden';
-            menuContent.style.width = '0';
+            menu.classList.add('hidden');
+            menuContent.classList.add('hidden');
         }
+    }
+    for (let i = 0; i < menuLinks.length; i++) {
+        menuLinks[i].addEventListener('click', (e) => {
+            if (e.target == menuLinks[i]) {
+                menu.classList.add('hidden');
+                menuContent.classList.add('hidden');
+            }
+        });
     }
 });
 
 
 // Right Menu
-rightMenuBtn.addEventListener('click', () => {
-    const menu = document.getElementById('right-menu');
+const rightMenuBtn = document.getElementById('right-menu-btn');
 
-    if (menu.style.opacity === '1') {
-        menu.style.opacity = '0';
-        menu.style.visibility = 'hidden';
-        menu.style.height = '0';
-    }
-    else {
-        menu.style.opacity = '1';
-        menu.style.visibility = 'visible';
-        menu.style.height = 'calc(100% - 70px)';
-    }
+rightMenuBtn.addEventListener('click', () => {
+    const menu = document.querySelector('.right-menu');
+
+    menu.classList.toggle('hidden');
 });
