@@ -4,7 +4,7 @@
 
 This project is a clone of the [Google Search Homepage](https://google.com). I made it to improve my skills with HTML and CSS, and also to study Git and GitHub. Any feedback is very welcome! Leave your opinions and suggestions.
 
-- **[Live Version]("https://leocosta1.github.io/google-clone/")**
+- [**Live Version**](https://leocosta1.github.io/google-clone/)
 
 Mobile Preview             |  Desktop Preview
 :-------------------------:|:-------------------------:
@@ -15,7 +15,7 @@ Mobile Preview             |  Desktop Preview
 ## ✅ ToDo
 
 - [x] Add a live preview.
-- [ ] Add some JS features like: switch between active, popup menus, etc.
+- [x] Add some JS features like: switch between active, popup menus, etc.
 
 ## ⚙ Dev Setup (VS Code)
 
