@@ -1,21 +1,18 @@
 # Google Clone
 
-> Responsive Google Homepage Layout.
+> Responsive Google Homepage Layout
 
 This project is a clone of the [Google Search Homepage](https://google.com). I made it to improve my skills with HTML and CSS, and also to study Git and GitHub. Any feedback is very welcome! Leave your opinions and suggestions.
 
-- [**Live Version**](https://leocosta1.github.io/google-clone/)
+- [**Live Preview**](https://leocosta1.github.io/google-clone/)
 
-Mobile Preview             |  Desktop Preview
-:-------------------------:|:-------------------------:
-![Mobile Preview](/images/mobile-preview.png)   |  ![Desktop Preview](/images/desktop-preview.png)
+## 🤓 Improved Skills
 
-<br />
-
-## ✅ ToDo
-
-- [x] Add a live preview.
-- [x] Add some JS features like: switch between active, popup menus, etc.
+- Flexbox;
+- Positioning;
+- Semantic HTML;
+- BEM Methodology;
+- Responsiveness (Media Queries, Relative Lengths);
 
 ## ⚙ Dev Setup (VS Code)
 
