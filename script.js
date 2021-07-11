@@ -9,12 +9,12 @@ const appsMenuButton = header.querySelector('.header__apps-button');
 headerLinks.forEach((link) => {
     link.addEventListener('click', () => {
         // Removing 'active' class from all links
-        headerLinks.forEach((previous) => {
-            previous.className = 'header__link';
+        headerLinks.forEach((previousLinks) => {
+            previousLinks.className = 'header__link';
         });
 
         // Adding 'active' class to the current clicked link
-        link.className += ' header__link--active';
+        link.classList.add('header__link--active');
     });
 });
 
@@ -23,7 +23,7 @@ headerLinks.forEach((link) => {
 leftMenuButton.addEventListener('click', () => {
     // Creating leftMenu element
     const leftMenu = document.createElement('div');
-    leftMenu.className = 'left-menu';
+    leftMenu.classList.add('left-menu');
     leftMenu.innerHTML = `
         <div class="left-menu__content">
             <a href="index.html" class="left-menu__img">
@@ -89,7 +89,7 @@ leftMenuButton.addEventListener('click', () => {
 
     const leftMenuContent = leftMenu.querySelector('.left-menu__content');
     // Animating
-    window.setTimeout(() => {
+    setTimeout(() => {
         leftMenuContent.style.transform = 'translateX(0)';
     }, 50);
 
@@ -100,7 +100,7 @@ leftMenuButton.addEventListener('click', () => {
             leftMenuContent.style.transform = 'translateX(-250px)';
 
             // Removing element
-            window.setTimeout(() => {
+            setTimeout(() => {
                 document.body.removeChild(leftMenu);
             }, 550);
         }
@@ -114,7 +114,7 @@ appsMenuButton.addEventListener('click', () => {
     if(!(document.body.contains(document.querySelector('.apps-menu')))) {
         // Creating appsMenu element
         const appsMenu = document.createElement('div');
-        appsMenu.className = 'apps-menu';
+        appsMenu.classList.add('apps-menu');
         appsMenu.innerHTML = `
             <div class="apps-menu__content">
                 <a href="#" class="apps-menu__item">
@@ -186,12 +186,12 @@ appsMenuButton.addEventListener('click', () => {
 
         // Appending element to body, and increasing height to show
         document.body.appendChild(appsMenu);
-        window.setTimeout(() => {
+        setTimeout(() => {
             appsMenu.style.height = '100%';
         }, 50);
 
         // Check outside click after the appsMenuButton is pressed
-        window.setTimeout(() => {
+        setTimeout(() => {
             document.body.addEventListener('click', closeMenu);
 
             function closeMenu(e) {
@@ -201,7 +201,7 @@ appsMenuButton.addEventListener('click', () => {
 
                     // Decreasing height to hide, and removing element from body
                     appsMenu.style.height = '0';
-                    window.setTimeout(() => {
+                    setTimeout(() => {
                         document.body.removeChild(appsMenu);
                     }, 550);
                 }

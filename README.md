@@ -8,7 +8,7 @@ This project is a clone of the [Google Search Homepage](https://google.com). I m
 
 ## 🤓 Improved Skills
 
-- Flexbox;
+- Layout (Flexbox);
 - Positioning;
 - Semantic HTML;
 - BEM Methodology;

@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 /* CSS Reset */
-* { box-sizing: border-box;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+}
 
 *, button, input, select, textarea {
     font-family: 'Roboto', sans-serif;
@@ -31,7 +35,9 @@
 html,
 body {
     height: 100%;
+}
 
+body {
     display: flex;
     flex-direction: column;
 }
@@ -47,7 +53,7 @@ svg { display: block; }
 
     display: flex;
 
-    padding: 0 4px 0 0;
+    padding-right: 4px;
 }
 
 .header__section {
@@ -67,10 +73,15 @@ svg { display: block; }
     cursor: pointer;
     outline: none;
 }
+.header__menu-button:focus,
+.header__apps-button:hover,
+.header__apps-button:focus {
+    background-color: rgba(0, 0, 0, 0.08);
+}
 
 .header__menu-button {
     padding: 12px 16px;
-    border-bottom: 2px solid transparent;
+    border: none;
 }
 .header__menu-button > svg {
     width: 24px;
@@ -87,13 +98,14 @@ svg { display: block; }
 
     margin-right: 8px;
     padding: 0 8px;
-    border-bottom: 2px solid transparent;
+    border: none;
 
     font-size: 12px;
     font-weight: 700;
     color: var(--gray);
 
     cursor: pointer;
+    position: relative;
 
     text-align: center;
     text-decoration: none;
@@ -101,7 +113,15 @@ svg { display: block; }
 }
 .header__link--active {
     color: var(--blue);
-    border-bottom: 2px solid var(--blue);
+}
+.header__link--active::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--blue);
 }
 
 .header__desktop-link {
@@ -126,9 +146,6 @@ svg { display: block; }
     height: 20px;
 
     fill: var(--dark-gray);
-}
-.header__apps-button:hover {
-    background-color: rgba(0, 0, 0, 0.08);
 }
 
 .header__login-button {
@@ -203,7 +220,8 @@ svg { display: block; }
     border-radius: 20px;
     outline: none;
 }
-.search-bar__input:hover, .search-bar__input:focus {
+.search-bar__input:hover,
+.search-bar__input:focus {
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
     border-color: transparent;
 }
@@ -378,6 +396,7 @@ svg { display: block; }
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 12px;
 
     text-decoration: none;
     overflow: hidden;
@@ -389,8 +408,6 @@ svg { display: block; }
 .apps-menu__item img {
     width: 42px;
     height: 42px;
-
-    margin-bottom: 12px;
 }
 
 .apps-menu__title {
@@ -438,7 +455,6 @@ svg { display: block; }
 .left-menu__img img {
     max-width: 84px;
     width: 100%;
-    height: auto;
 }
 
 .left-menu__list {
